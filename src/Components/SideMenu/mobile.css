@@ -1,0 +1,45 @@
+.sideSlice {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+
+} 
+
+
+.shrink .sideSl {
+  width: 50%;
+  transform:translateX(50%);
+  transition: width 0.3s ease;
+  border-radius: 10px 10px 10px 10px; 
+ 
+}
+
+
+/* .shrink .sideSl22 {
+  width: 70%;
+  transition: width 0.3s ease;
+  border-radius: 0px 10px 10px 0px; 
+  transform: translateX(70%);
+} */
+
+
+.hi-text {
+  display: none;
+  position: absolute;
+  /* right: 0;
+  top: 0; */
+  height: 100%;
+  /* background: linear-gradient(to right, #373195, #5fa1d6); */
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.show-text .hi-text {
+  display: flex;
+}
+
+.button-shadow {
+  box-shadow: 4px 4px 0px 0px #a3a3a3;
+}

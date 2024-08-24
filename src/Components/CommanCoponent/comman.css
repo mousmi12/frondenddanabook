@@ -1,0 +1,25 @@
+.bgImageLoad{
+background: url('../../asset/Gif/beforeload.gif');
+background-repeat: no-repeat;
+background-size:contain;
+background-position:center ;
+}
+
+
+.bgImageLoadArabic{
+    background: url('../../asset/Gif/arabic.gif');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center ;
+    }
+
+.bgImageLoadTableData{
+    background: url('../../asset/Gif/output-onlinegiftools.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    }
+
+    .alertBGColor {
+        background: linear-gradient(to right,#373195,#5fa1d6);
+    }

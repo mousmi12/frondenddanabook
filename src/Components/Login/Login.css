@@ -1,0 +1,30 @@
+
+.loginBgImage {
+    background-image: url('../../asset/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.buttSingIn {
+    background: linear-gradient(to right,#5fa1d6,#373195);
+}
+
+
+.triangle{
+	/* width: 10px;
+	height: 10px; */
+	border-width: 50px 0 0 60px;
+	border-color: transparent transparent transparent #372f93;
+	border-style: solid;
+}
+
+@font-face {
+  font-family: 'MalayalamFont';
+  src: url('../../asset/font-family/FMLGP0BTT.ttf') format('truetype'),
+       url('../../asset/font-family/FMLGP0NTT.ttf') format('truetype');
+}
+
+.malayalam {
+  font-family: 'MalayalamFont', sans-serif;
+}
+

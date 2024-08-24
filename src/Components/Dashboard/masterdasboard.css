@@ -1,0 +1,5 @@
+.masterbgImage {
+    background: url('../../asset/DashboardIcon/img.png') no-repeat center center;
+    background-size: contain;
+    object-fit: contain;
+}

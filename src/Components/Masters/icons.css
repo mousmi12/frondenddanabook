@@ -1,0 +1,16 @@
+:root {
+    --icon-color: #000000; /* default color */
+}
+
+.small-icon {
+    width: 12px;
+    height: 12px;
+   }
+   .large-icon {
+    width: 25px;
+    height: 25px;
+    filter: invert(17%) sepia(20%) saturate(2420%) hue-rotate(214deg) brightness(91%) contrast(98%);
+
+   }
+
+   

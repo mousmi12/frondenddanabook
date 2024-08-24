@@ -1,0 +1,17 @@
+.NavMenuBgColor {
+    background: linear-gradient(to right,#373195,#5fa1d6);
+   
+}
+
+
+.logOutbutton{
+    background: white;
+    color: black;
+    border:2px solid #373195;
+}
+
+.logOutbutton:hover{
+    background: linear-gradient(to right,#373195,#5fa1d6);
+    color: white;
+    border:0px solid white;
+}

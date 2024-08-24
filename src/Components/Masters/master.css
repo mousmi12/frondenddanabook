@@ -1,0 +1,172 @@
+.searchable__controls input {
+    padding: 0;
+    background-color: white;
+    color: black;
+
+}
+
+.searchable__controls {
+    border: 1px solid #43418e;
+    background-color: white;
+    border-radius: 6px;
+    padding-left: 4px;
+}
+
+.searchable__list {
+    background-color: white;
+    color: black;
+}
+
+.searchable__list__item--active {
+    color: black;
+}
+
+.searchable__list__item {
+    color: black;
+
+}
+
+
+
+
+/* select */
+
+.css-1u9des2-indicatorSeparator {
+    display: none;
+}
+
+.css-1xc3v61-indicatorContainer {
+    padding: 0px;
+}
+
+.css-rjnrth-control:hover {
+    border: 1px solid #43418e;
+}
+
+
+/* Custom react maintain react table */
+
+.mantine-1qybf08 {
+    background: linear-gradient(to right, #5fa1d6, #373195);
+}
+
+
+.mantine-cnjrhp>thead>tr>th {
+    color: white;
+}
+
+.mantine-h1g4yy {
+    color: black;
+}
+
+/* 
+.mantine-1qybf08 thead>th{
+    width: 100px;
+
+} */
+.mantine-1m3tpc2 {
+    width: 100%;
+    overflow: auto;
+    position: relative;
+}
+
+.mantine-a5v3r0 {
+    width: 100%;
+}
+
+/* 
+.mantine-cnjrhp {
+    display: table-row-group;
+    position: relative;
+    opacity: 0.97;
+    top: 0;
+    z-index: 2;
+} */
+
+/* filter Class MAster LISt */
+
+.filterWrapper {
+    /* display: flex;
+    align-items: center; */
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 520px;
+}
+
+/* Optional: Add custom scrollbar styles */
+.filterWrapper::-webkit-scrollbar {
+    height: 8px;
+    width: 4px;
+}
+
+.filterWrapper::-webkit-scrollbar-thumb {
+    background: #a6a3c9;
+    border-radius: 10px;
+    display: none
+}
+
+.filterWrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    display: none;
+}
+
+/* Optional: Add custom scrollbar styles */
+::-webkit-scrollbar {
+    height: 8px;
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a6a3c9;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    display: none;
+}
+
+
+.filterShadow {
+    box-shadow: 4px 4px 0px 0px #dddddd;
+
+}
+
+.filterWidthHieght {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.activeWidthHieght {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+.activeShadow {
+    box-shadow: 4px 4px 0px 0px #a3a3a3;
+}
+
+.filterTabShadow {
+    box-shadow: inset 2px -4px 8px 0px #7f7272
+}
+
+.footerShadow {
+    box-shadow: -2px 0px 4px 0px #a3a3a3;
+}
+
+.scanbutton{
+    background: white;
+}
+
+.scanbutton:hover{
+    background:#a6a3c9;
+}
+
+.scanbuttondark{
+    background: white;
+}
+
+.scanbuttondark:hover{
+    background:#717378;
+}

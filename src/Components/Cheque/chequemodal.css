@@ -1,0 +1,31 @@
+.logOutbutton:hover{
+    background: white;
+    color: black;
+    border:2px solid #373195;
+    box-shadow: 0px 4px 0px 0px #ffffff;
+}
+
+.logOutbutton{
+    background: linear-gradient(to right,#373195,#5fa1d6);
+    color: white;
+    border:0px solid white;
+    box-shadow: 0px 4px 0px 0px #a3a3a3;
+}
+
+.ChequeShadow {
+    box-shadow: 0px 1px 20px 2px #a3a3a3;
+}
+
+.closeButton{
+    background: white;
+    color: black;
+    border:2px solid #373195;
+    box-shadow: 0px 4px 0px 0px #ffffff;
+}
+
+.closeButton:hover{
+    background: linear-gradient(to right,#373195,#5fa1d6);
+    color: white;
+    border:0px solid white;
+    box-shadow: 0px 4px 0px 0px #a3a3a3;
+}
