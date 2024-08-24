@@ -5,14 +5,10 @@ import { selectMenuFunction } from "../../Redux/Reducer/activateMenuSlice";
 // master API
 export const commanAPI = "https://zerobook.milestone-hosting.cloud"
 
-export const BaseURL = `zerobook.online`
+export const BaseURL = `zerobook.store`
 
 // comman API Update Delete List Insert
 export const commanAactionsAPI = `https://operations.${BaseURL}/api/operation`
-
-
-
-
 
 
 
@@ -59,12 +55,13 @@ export const fetchData = async (setFormDetails, selectState, sethiddenReloadIcon
 
 
 // create groupListData for Master Form Supplier (Dropdown)
-export const groupListData = async (gropDropListAPI, setGroupList) => {
+export const groupListData = async (gropDropListAPI, setGroupList,setAccountList) => {
   try {
     const response = await axios.get(gropDropListAPI);
     console.log("Supplier Dropdown after", gropDropListAPI);
     console.log("supplier Drop response : ", response.data.data);
     setGroupList(response.data.data);
+    setAccountList(response.data.data);
   } catch (error) {
     console.error('Error fetching supplier list:', error);
   }

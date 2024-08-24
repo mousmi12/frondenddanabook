@@ -110,7 +110,7 @@ function MobileNestedMenu({ menuItems, filterMenuId, svgImages, setOpen }) {
 
                                 {svgImages.filter((imageItem) => imageItem.name === subitem.image)?.map((menu) => (
                                     <div className='w-full buttonbackground h-[100%] relative'>
-                                        <button className={`p-1 buttonColor ${index == 0 ? 'topsradious' : ''} relative w-full h-full flex items-center sideSl`} onClick={() => { dispatch(selectMenuFunction({ name: subitem.primaryaction.name, opid: subitem.opid })); handlecloseMobileMenu(); }}>
+                                        <button className={`p-1 buttonColor ${index == 0 ? 'topsradious' : ''} relative w-full h-full flex items-center sideSl`} onClick={() => { dispatch(selectMenuFunction({ name: subitem.primaryaction.name, opid: subitem.opid })); dispatch(selectSubmenuLabelFunction({ submenulabel: subitem.label })); handlecloseMobileMenu(); }}>
                                             <img key={menu.id} src={menu?.image || DefaultImage} alt="" className='rounded p-1 buttonSvgBagroundColor' style={{ width: '40px', height:'40px' }} />
                                             <span className='text-black font-bold pl-3'>{subitem?.label}</span>
                                         </button>

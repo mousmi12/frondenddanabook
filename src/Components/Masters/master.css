@@ -170,3 +170,10 @@
 .scanbuttondark:hover{
     background:#717378;
 }
+
+
+.AccountMenuBgColor {
+    background: linear-gradient(to right,#373195,#5fa1d6);
+   
+}
+

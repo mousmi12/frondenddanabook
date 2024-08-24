@@ -28,8 +28,8 @@ function MasterGrid({gridfield}){
           // Clear rows when gridfield changes
           handleClearRows();
     
-     const initialRow =  gridfield?.reduce((acc,item)=> {
-        acc[item.name]=item.initialvalue!=null && item.initialvalue!=undefined?item.inputtype=="Number"?Number(item.initialvalue):item.initialvalue:"";
+     const initialRow =  gridfield?.reduce((acc,{name})=> {
+        acc[name]=""; 
         return acc
      }, {});
 
@@ -137,10 +137,10 @@ function MasterGrid({gridfield}){
     }
 
     const addRow =()=> {
-        const newRow =  gridfield?.reduce((acc,item)=> {
-            acc[item.name]=item.initialvalue!=null && item.initialvalue!=undefined?item.inputtype=="Number"?Number(item.initialvalue):item.initialvalue:"";
-            return acc
-         }, {});
+        const newRow = gridfield.reduce((acc,{name})=> {
+            acc[name]="";
+            return acc;
+        },{});
         setRows([...rows, newRow])
         setActiveRow(null)
     }
@@ -201,10 +201,6 @@ function MasterGrid({gridfield}){
         gridfield.forEach(field =>{
           if(field.required && !row[field.name]){
             errors[field.name] = true
-          }
-          if(field.inputtype==="Number" && field.required && row[field.name]==0){
-            errors[field.name] = `${field.label} cannot be zero or empty.`;
-
           }
         })
         setValidationErrors(prevErrors => ({ ...prevErrors, [index]: errors }));

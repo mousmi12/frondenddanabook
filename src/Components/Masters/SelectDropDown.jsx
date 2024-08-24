@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo, forwardRef } from 'react';
 import Select from 'react-select';
 import CheckCircleOutlineRoundedIcon from '@mui/icons-material/CheckCircleOutlineRounded';
 import AddIcon from '@mui/icons-material/Add';
@@ -29,12 +29,14 @@ const CustomMenu = ({ innerRef, innerProps, isDisabled, children }) =>
     </div>
   ) : null;
 
-function SelectDropDown({ field, formData, formDetails, handleInputChange, getAccDataUpdate, setgetAccDataUpdate, setIsValidateRequired, isValidateRequired }) {
+function SelectDropDown({ field, formData, formDetails, handleInputChange, getAccDataUpdate, setgetAccDataUpdate, setIsValidateRequired, isValidateRequired, setAccountList, ref }) {
   const [groupList, setGroupList] = useState([]);
   const selectState = useSelector((state) => state.selectMenu);
   const selectFilterName = useSelector((state) => state.Filternames)
   const dispatch = useDispatch();
+  const forward = forwardRef(ref)
 
+  console.log("forward",forward);
   // create selectore foe Arabic Alignment
   const arabicAlignMent = useSelector((state) => state.arabicAlignMent)
   // darkTheme
@@ -54,7 +56,7 @@ function SelectDropDown({ field, formData, formDetails, handleInputChange, getAc
 
   useEffect(() => {
     if (apiURL) {
-      groupListData(apiURL, setGroupList);
+      groupListData(apiURL, setGroupList, setAccountList);
     }
   }, [apiURL]);
 
@@ -86,7 +88,7 @@ function SelectDropDown({ field, formData, formDetails, handleInputChange, getAc
       height: 25,
       minHeight: 25,
       width: '100%',
-      maxWidth:'100%',
+      maxWidth: '100%',
       borderRadius: '6px',
       backgroundColor: `${(selectState.name === "Delete" || selectState.name === "View" || field.readonly) ? dayTheme.inputFildReadColor : darkModeState.checkvalue ? dayTheme.inputFildColor : darkTheme.inputFildColor}`,
       border: state.isFocused ? 0 : '1px solid #43418e',
@@ -97,8 +99,8 @@ function SelectDropDown({ field, formData, formDetails, handleInputChange, getAc
     valueContainer: (provided) => ({
       ...provided,
       height: '20px',
-      width:'100%',
-      maxWidth:'100%',
+      width: '100%',
+      maxWidth: '100%',
       padding: '0 6px',
       margin: '0px 0px',
       fontSize: 14,
@@ -117,12 +119,12 @@ function SelectDropDown({ field, formData, formDetails, handleInputChange, getAc
     }),
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isFocused ? darkModeState.checkvalue ? dayTheme.LabelBarColor : darkTheme.LabelBarColor  : "white",
+      backgroundColor: state.isFocused ? darkModeState.checkvalue ? dayTheme.LabelBarColor : darkTheme.LabelBarColor : "white",
       color: state.isSelected ? 'black' : 'black',
       padding: '3px 12px',
       '&:hover': { backgroundColor: darkModeState.checkvalue ? dayTheme.LabelBarColor : darkTheme.LabelBarColor },
     }),
-  }), [selectState, field,darkModeState.checkvalue]);
+  }), [selectState, field, darkModeState.checkvalue]);
 
   const validate = useInputBoxValidation();
 
@@ -131,6 +133,7 @@ function SelectDropDown({ field, formData, formDetails, handleInputChange, getAc
       <div className='relative sm:w-[100%] lg:w-[325px] xl:w-[325px]'>
         {groupList && groupList.length > 0 && (
           <Select
+            ref={forward}
             className={`${field.required ? 'outline-rose-400' : 'outline-blue-200'} rounded-md text-gray-400`}
             options={options}
             menuPlacement="bottom"
